@@ -1,1 +1,1 @@
-Snirjka.github.io/public
+Snirjka.github.io
