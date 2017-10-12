@@ -1,0 +1,54 @@
+@import '../../vars.scss';
+nav {
+    z-index: 4;
+    max-height: 21px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: $nav-bg;
+    .nav-size {
+        width: 992px;
+        position: relative;
+        margin: auto;
+        ul {
+            display: inline;
+            list-style-type: none;
+            li {
+                i {
+                    margin-right: 5px;
+                }
+                cursor: pointer;
+                font-weight: 600;
+                transition: .7s;
+                display: inline;
+                padding: 15px;
+            }
+            li:hover {
+                background: $body-bg;
+                color: $nav-bg;
+                i {
+                    animation: rotate 0.7s;
+                }
+            }
+        }
+        .brand {
+            font-family: 'Lobster', cursive;
+            float: right;
+            a {
+                padding: 15px;
+            }
+            i{
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-10deg);}
+    50%  {transform: rotate(10deg);}
+    75%  {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}

@@ -1,0 +1,34 @@
+$main-color: #551A8B;
+.contact {
+    animation: rollin .5s;
+    padding-top:75px;
+    h1 {
+        margin-left: 60px;
+        color: $main-color;
+    }
+    .contact-ways {
+        div {
+            span.quote.li:nth-child(even) {
+                margin-left: 15px;
+            }
+            i {
+                font-size: 24px;
+                padding: 15px;
+                max-width: 20px;
+            }
+            a {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@keyframes rollin {
+    from {margin-left: -320px}
+    to {margin-left: 0}
+}
+
+@keyframes leftShow {
+    from{ margin-left: -500px;}
+    to{ margin-left: 0;}
+}

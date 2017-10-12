@@ -1,0 +1,28 @@
+div {
+    position: relative;
+    .welcome {
+        .slide-div {
+            animation: slidein 1s;
+            h1 {
+                color: white;
+                margin-left: 60px;
+            }
+        } //welcome settings
+        overflow: hidden;
+        padding-top: 50px;
+        padding-left: 10px;
+        margin: auto;
+        z-index: 2;
+        background: transparent;
+        width: 992px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-top: -400px;
+    }
+    to {
+        margin-left: 0;
+    }
+}

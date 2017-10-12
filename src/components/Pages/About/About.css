@@ -1,0 +1,28 @@
+.about {
+  overflow: hidden;
+  z-index: 2; }
+  .about h1, .about p {
+    margin-left: 80px; }
+  .about p {
+    color: white; }
+  .about h1 {
+    color: #551A8B;
+    font-size: 42px;
+    width: 300px;
+    position: relative; }
+    .about h1 .me {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      top: -20px;
+      right: 0;
+      position: absolute; }
+  .about .scrollinger {
+    padding-top: 150px;
+    animation: marginLeft .7s; }
+
+@keyframes marginLeft {
+  from {
+    margin-left: -650px; }
+  to {
+    margin-top: 0; } }

@@ -1,0 +1,122 @@
+$main-color: #551A8B;
+.projects {
+    animation: marginBottom 1s;
+    padding-top: 75px;
+    h1 {
+        text-align: center;
+        color: $main-color;
+    }
+    div {
+        ul {
+            margin-top: 30px;
+            position: relative;
+            padding: 0 2%;
+            width: 100%;
+            li {
+                width: 30%;
+                margin: 0 1%;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                img {
+                    z-index: 1;
+                    height: 150px;
+                    width: 275px;
+                    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.17);
+                    border-radius: 5px;
+                    border: 2px solid $main-color;
+                    transition: .7s;
+                }
+                span {
+                    font-size: 24px;
+                    font-weight: 600;
+                    transition: .7s;
+                    color: white;
+                }
+                button {
+                    opacity: .4;
+                    font-size: 20px;
+                    padding: 10px 40px;
+                    color: $main-color;
+                    border: 1px solid $main-color;
+                    border-radius: 52px;
+                    position: absolute;
+                    top: 50px;
+                    left: 82px;
+                    transition: .7s;
+                }
+            }
+            li:hover {
+                button {
+                    color: white;
+                    background: $main-color;
+                    border: 1px solid black;
+                    opacity: 0.8;
+                }
+                img {
+                    border: 2px solid white;
+                }
+                span {
+                    opacity: .8;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+.gallery.lay {
+    min-width: 840px;
+    border-radius: 5px;
+    .viewing {
+        text-align: center;
+        img {
+            border-radius: 0;
+            border: 2px solid $main-color;
+            height: 490px;
+            cursor: default;
+        }
+    }
+    .img-block {
+        position: relative;
+        ul {
+            margin: 0;
+            position: relative;
+            width: 100%;
+            li {
+                .chosen {
+                    border: 2px solid white;                    
+                }
+                .to-view {
+                    border-radius: 0;
+                    cursor: pointer;
+                    width: 220px;
+                    height: 110px;
+                }
+            }
+        }
+    }
+}
+
+.topOut {
+    animation: topOut .5s;
+}
+
+@keyframes topOut {
+    from {transform: rotateX(0deg);}
+    to {transform: rotateX(90deg);}
+}
+
+.topIn {
+    animation: topIn .5s;
+}
+
+@keyframes topIn {
+    from {transform: rotateX(90deg);}
+    to {transform: rotateX(0deg);}
+}
+
+@keyframes marginBottom {
+    from{margin-bottom: -255px;}
+    to{margin-bottom: 0;}    
+}
