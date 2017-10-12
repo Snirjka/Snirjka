@@ -13,7 +13,7 @@ export default class Gallery extends Component {
         return (
             <div className="gallery lay">
                 <div className="viewing">
-                    <img className={this.state.animation} alt="" src={`./assets/imgs/projects/${this.props.project.folder}/${this.state.viewing}.png`} />
+                    <img className={this.state.animation} alt="" src={`./assets/imgs/projects/${this.props.project.folder}/${this.state.viewing}.jpg`} />
                 </div>
                 <div className='img-block'>
                     <ul>
@@ -21,12 +21,10 @@ export default class Gallery extends Component {
                             <li key={i}><img onClick={() => {
                                 this.setState({ animation: 'topOut' })
                                 setTimeout(() => this.setState({viewing: i, animation: 'topIn' }), 500)
-                            }} alt="" className={"to-view " + (this.state.viewing == i ? "chosen" : "")} src={`./assets/imgs/projects/${this.props.project.folder}/${i}.png`} /></li>)}
+                            }} alt="" className={"to-view " + (this.state.viewing === i ? "chosen" : "")} src={`./assets/imgs/projects/${this.props.project.folder}/${i}.jpg`} /></li>)}
                     </ul>
                 </div>
             </div>
         )
     }
-} {/* this.project.map((gallery, i) => <li>
-    <img alt="" className='to-view' src="./assets/imgs/projects/task-client/0.png" />
-</li>) */}
+}

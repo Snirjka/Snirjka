@@ -33,7 +33,7 @@ export default class Projects extends Component {
                     <ul>
                         {projects.map((project, i) =>
                             <li key={i}>
-                                <img alt="" src={'./assets/imgs/projects/' + project.folder + '/0.png'} />
+                                <img alt="" src={'./assets/imgs/projects/' + project.folder + '/0.jpg'} />
                                 <button onClick={() => this.viewGallery(project)}>View</button>
                                 <span>{project.name}</span>
                             </li>)}
