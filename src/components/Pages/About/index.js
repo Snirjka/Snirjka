@@ -18,7 +18,7 @@ export default class About extends Component {
                         Used libraries such as - React+Redux/jQuery/Angular.<br />
                         I know back-end as well - PHP/MYSQL/NODEJS, Also knows Symfony/Doctrine.<br /><br />
                         You can check the code to the site<br />
-                        <a target='self' href="https://github.com/Snirjka/Snirjka">HERE!</a><br />
+                        <a target='self' href="https://github.com/Snirjka/Snirjka.github.io">HERE!</a><br />
                         Enjoy.
                         </p>
                     <span className='quote h1'>&lt;/p&gt;</span><br />
