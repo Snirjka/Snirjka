@@ -75,6 +75,9 @@ div {
     margin-left: 80px; }
   .about p {
     color: white; }
+    .about p a {
+      font-weight: bold;
+      font-size: 24px; }
   .about h1 {
     color: #551A8B;
     font-size: 42px;
