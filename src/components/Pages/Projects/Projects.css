@@ -1,0 +1,99 @@
+.projects {
+  animation: marginBottom 1s;
+  padding-top: 75px; }
+  .projects h1 {
+    text-align: center;
+    color: #551A8B; }
+  .projects div ul {
+    margin-top: 30px;
+    position: relative;
+    padding: 0 2%;
+    width: 100%; }
+    .projects div ul li {
+      width: 30%;
+      margin: 0 1%;
+      display: inline-block;
+      position: relative;
+      text-align: center; }
+      .projects div ul li img {
+        z-index: 1;
+        height: 150px;
+        width: 275px;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.17);
+        border-radius: 5px;
+        border: 2px solid #551A8B;
+        transition: .7s; }
+      .projects div ul li span {
+        font-size: 24px;
+        font-weight: 600;
+        transition: .7s;
+        color: white; }
+      .projects div ul li button {
+        opacity: .4;
+        font-size: 20px;
+        padding: 10px 40px;
+        color: #551A8B;
+        border: 1px solid #551A8B;
+        border-radius: 52px;
+        position: absolute;
+        top: 50px;
+        left: 82px;
+        transition: .7s; }
+    .projects div ul li:hover button {
+      color: white;
+      background: #551A8B;
+      border: 1px solid black;
+      opacity: 0.8; }
+    .projects div ul li:hover img {
+      border: 2px solid white; }
+    .projects div ul li:hover span {
+      opacity: .8;
+      color: #551A8B; }
+
+.gallery.lay {
+  min-width: 840px;
+  border-radius: 5px; }
+  .gallery.lay .viewing {
+    text-align: center; }
+    .gallery.lay .viewing img {
+      border-radius: 0;
+      border: 2px solid #551A8B;
+      height: 490px;
+      cursor: default; }
+  .gallery.lay .img-block {
+    position: relative; }
+    .gallery.lay .img-block ul {
+      margin: 0;
+      position: relative;
+      width: 100%; }
+      .gallery.lay .img-block ul li .chosen {
+        border: 2px solid white; }
+      .gallery.lay .img-block ul li .to-view {
+        border-radius: 0;
+        cursor: pointer;
+        width: 220px;
+        height: 110px; }
+
+.topOut {
+  animation: topOut .7s; }
+
+@keyframes topOut {
+  from {
+    transform: rotateX(0deg); }
+  to {
+    transform: rotateX(90deg); } }
+
+.topIn {
+  animation: topIn .7s; }
+
+@keyframes topIn {
+  from {
+    transform: rotateX(90deg); }
+  to {
+    transform: rotateX(0deg); } }
+
+@keyframes marginBottom {
+  from {
+    margin-bottom: -255px; }
+  to {
+    margin-bottom: 0; } }

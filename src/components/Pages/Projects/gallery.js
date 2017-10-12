@@ -20,7 +20,7 @@ export default class Gallery extends Component {
                         {this.props.project && this.props.project.imgs.map((i) =>
                             <li key={i}><img onClick={() => {
                                 this.setState({ animation: 'topOut' })
-                                setTimeout(() => this.setState({viewing: i, animation: 'topIn' }), 500)
+                                setTimeout(() => this.setState({viewing: i, animation: 'topIn' }), 600)
                             }} alt="" className={"to-view " + (this.state.viewing === i ? "chosen" : "")} src={`./assets/imgs/projects/${this.props.project.folder}/${i}.jpg`} /></li>)}
                     </ul>
                 </div>
