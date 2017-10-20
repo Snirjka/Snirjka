@@ -306,7 +306,8 @@ ul {
   padding: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #551A8B; }
 
 button, button:focus {
   cursor: pointer;
