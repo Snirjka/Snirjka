@@ -1,0 +1,63 @@
+@import '../../assets/style/variables.scss';
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $headerHeight;
+    background-color: #181818;
+
+    nav.container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul li {
+            height: 100%;
+            display: inline-block;
+
+            a {
+                padding: 15px;
+                position: relative;
+
+                svg {
+                    margin-right: 8px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    background: white;
+                    width: 0;
+                    transition: 0.5s;
+                    left: 15px;
+                    bottom: 10px;
+                }
+            }
+
+            &:hover {
+                a {
+                    svg {
+                        animation: rotate 1s;
+                    }
+
+                    &::after {
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-link {
+        color: $primaryColor;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        display: block;
+        padding: 8px;
+    }
+}

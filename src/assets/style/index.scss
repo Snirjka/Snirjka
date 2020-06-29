@@ -1,0 +1,39 @@
+// GLOBAL
+@import './normalize.scss';
+@import './variables.scss';
+
+body {
+  font-family: $fontDefault;
+  background-image: url('../images/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  padding-top: $headerHeight;
+  min-height: calc(100vh - #{$headerHeight});
+}
+
+h1 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+
+  &:active,
+  &:visited {
+    color: inherit;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}

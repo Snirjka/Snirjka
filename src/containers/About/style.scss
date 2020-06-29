@@ -1,0 +1,49 @@
+@import '../../assets/style/animations.scss';
+@import '../../assets/style/variables.scss';
+
+.about {
+    >div {
+        animation: appear 1s;
+    }
+
+    h1 {
+        color: $primaryColor;
+
+        img {
+            width: 40px;
+            top: 10px;
+            left: 8px;
+            position: relative;
+            animation-name: pop;
+            animation-duration: 1s;
+        }
+    }
+
+    p {
+        color: white;
+
+    }
+}
+
+.skills {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 8px;
+
+        li {
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            transform: scale(0);
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}

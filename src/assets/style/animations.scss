@@ -1,0 +1,29 @@
+@keyframes slidedown {
+    from {
+        margin-top: -400px;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes rollin {
+    from {margin-left: -320px}
+    to {margin-left: 0}
+}
+
+@keyframes slideleft {
+    from{ margin-left: -500px;}
+    to{ margin-left: 0;}
+}
+
+@keyframes pop {
+    from{ transform: scale(0);}
+    to{ transform: scale(1);}
+}
+
+@keyframes appear {
+    from{ opacity: 0;}
+    to{ opacity: 1;}
+}
+
