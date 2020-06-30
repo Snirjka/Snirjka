@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDencrypt } from 'use-dencrypt-effect';
 import PropTypes from 'prop-types';
 import { TagName, TagText } from '../../components/Tags';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,6 +48,18 @@ ContactLink.propTypes = {
     icon: PropTypes.any
 }
 
+const projectLink = 'https://github.com/snirjka/snirjka.github.io';
+
+const SourceCodeLink = () => {
+    const { result, dencrypt } = useDencrypt();
+    useEffect(() => {
+        dencrypt('VIEW SOURCECODE');
+    })
+    return (
+        <a href={projectLink} className='sourcecode' rel="noopener noreferrer" target="_blank">{result}</a>
+    );
+};
+
 
 const Contact = () => {
     return (
@@ -60,6 +73,11 @@ const Contact = () => {
                 <TagName br tabs={4}>ul</TagName>
                 <ContactOptions />
                 <TagName br tabs={4}>/ul</TagName>
+                <TagName br tabs={4}>a href="github.com/snirjka"</TagName>
+                <TagText br tabs={6}>
+                    <SourceCodeLink />
+                </TagText>
+                <TagName br tabs={4}>/a</TagName>
                 <TagName br tabs={2}>/body</TagName>
                 <TagName>/html</TagName>
             </div>

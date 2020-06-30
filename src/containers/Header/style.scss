@@ -17,24 +17,38 @@
         ul li {
             height: 100%;
             display: inline-block;
-
+            width: 120px;
             a {
                 padding: 15px;
                 position: relative;
+                display: flex;
+                justify-content: center;
 
                 svg {
                     margin-right: 8px;
                 }
 
-                &::after {
+
+                &::before {
                     content: '';
                     position: absolute;
                     height: 2px;
                     background: white;
                     width: 0;
                     transition: 0.5s;
-                    left: 15px;
+                    left: 12.5%;
                     bottom: 10px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    background: $primaryColor;
+                    width: 0;
+                    transition: 0.5s;
+                    right: 12.5%;
+                    bottom: 6px;
                 }
             }
 
@@ -44,6 +58,7 @@
                         animation: rotate 1s;
                     }
 
+                    &::before,
                     &::after {
                         width: 75%;
                     }

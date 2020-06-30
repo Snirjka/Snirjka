@@ -15,4 +15,12 @@
             margin-right: 4px;
         }
     }
+
+    .sourcecode {
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 8px 0;
+        color: $primaryColor;
+    }
 }
