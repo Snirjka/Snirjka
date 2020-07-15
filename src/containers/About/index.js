@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { TagName, TagText } from '../../components/Tags';
+import StretchingChild from '../../components/StretchingChild';
 import { SkillsContext } from '../../contexts/SkillsContext';
 import mePNG from '../../assets/images/me.png';
 import './style.scss';
@@ -44,7 +45,7 @@ const About = () => {
                 <TagName br>html</TagName>
                 <TagName br tabs={2}>body</TagName>
                 <TagName br tabs={4}>h1 style="color: #551A8B;"</TagName>
-                <TagText tabs={6}><h1>About me <img src={mePNG} alt='me' /></h1></TagText>
+                <TagText tabs={6}><h1><StretchingChild>About me <img src={mePNG} alt='me' /></StretchingChild></h1></TagText>
                 <TagName br tabs={4}>/h1</TagName>
                 <TagName br tabs={4}>p</TagName>
                 <TagText br tabs={6}>

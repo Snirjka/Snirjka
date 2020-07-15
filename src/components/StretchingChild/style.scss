@@ -1,0 +1,11 @@
+@import '../../assets/style/variables.scss';
+@import '../../assets/style/animations.scss';
+
+.stretching-child {
+    cursor: default;
+    transition: 0.3s ease-out;
+    &.stretching {
+        display: inline-block;
+        animation: stretch 1s;
+    }
+}

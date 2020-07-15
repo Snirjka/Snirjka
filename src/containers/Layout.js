@@ -7,7 +7,7 @@ import Contact from './Contact';
 import Loading from '../components/Loading';
 
 const Layout = () => {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     return (
         <>
             {

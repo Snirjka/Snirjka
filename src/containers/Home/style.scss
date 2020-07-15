@@ -8,11 +8,20 @@
 
     h1 {
         color: white;
+        letter-spacing: 1px;
+        font-size: 36px;
+        cursor: default;
 
-        span {
+        .name {
             display: inline-block;
             animation: bounce 1s 1s;
-            animation-iteration-count: 7;
+            animation-iteration-count: 3;
+        }
+
+        span {
+            &:hover {
+                color: $primaryColor;
+            }
         }
     }
 }
