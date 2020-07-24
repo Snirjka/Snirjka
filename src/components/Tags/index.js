@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-export const TagName = ({ tabs = 0, children, br }) => {
+const TagName = ({ tabs = 0, children, br }) => {
     return (
         <>
             <span className='tag-name' style={{ marginLeft: tabs * 10 + 'px' }}>&lt;{children}&gt;</span>
@@ -20,7 +20,7 @@ TagName.propTypes = {
     br: PropTypes.bool
 }
 
-export const TagText = ({ children, tabs = 0 }) => {
+const TagText = ({ children, tabs = 0 }) => {
     return (
         <div style={{ marginLeft: tabs * 10 + 'px' }}>
             {children}
@@ -29,6 +29,23 @@ export const TagText = ({ children, tabs = 0 }) => {
 }
 
 TagText.propTypes = {
+    tabs: PropTypes.number,
+    children: PropTypes.node.isRequired,
+}
+
+export const TagGroup = ({ tag, attr, tabs = 0, children }) => {
+    return (
+        <div>
+            <TagName tabs={tabs} br>{tag}{attr && ` ${attr}`}</TagName>
+            <TagText tabs={tabs + 2}>{children}</TagText>
+            <TagName tabs={tabs}>/{tag}</TagName>
+        </div>
+    );
+}
+
+TagGroup.propTypes = {
+    tag: PropTypes.string,
+    attr: PropTypes.string,
     tabs: PropTypes.number,
     children: PropTypes.node.isRequired,
 }

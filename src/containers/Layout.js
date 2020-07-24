@@ -25,7 +25,6 @@ const Layout = () => {
                         </Switch>
                     </section>
             }
-
         </>
     );
 }

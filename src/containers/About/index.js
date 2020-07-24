@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TagName, TagText } from '../../components/Tags';
+import { TagGroup } from '../../components/Tags';
 import StretchingChild from '../../components/StretchingChild';
 import { SkillsContext } from '../../contexts/SkillsContext';
 import mePNG from '../../assets/images/me.png';
@@ -41,25 +41,19 @@ const Skills = () => {
 const About = () => {
     return (
         <section className='about container'>
-            <div>
-                <TagName br>html</TagName>
-                <TagName br tabs={2}>body</TagName>
-                <TagName br tabs={4}>h1 style="color: #551A8B;"</TagName>
-                <TagText tabs={6}><h1><StretchingChild>About me <img src={mePNG} alt='me' /></StretchingChild></h1></TagText>
-                <TagName br tabs={4}>/h1</TagName>
-                <TagName br tabs={4}>p</TagName>
-                <TagText br tabs={6}>
-                    <p dangerouslySetInnerHTML={{ __html: aboutMe }} />
-                </TagText>
-                <TagName br tabs={4}>/p</TagName>
-                <TagName br tabs={4}>section class="skills"</TagName>
-                <TagText br tabs={6}>
-                    <Skills />
-                </TagText>
-                <TagName br tabs={4}>/section</TagName>
-                <TagName br tabs={2}>/body</TagName>
-                <TagName>/html</TagName>
-            </div>
+            <TagGroup tag='html'>
+                <TagGroup tag='body'>
+                    <TagGroup tag='h1'>
+                        <h1><StretchingChild>About me <img src={mePNG} alt='me' /></StretchingChild></h1>
+                    </TagGroup>
+                    <TagGroup tag='p'>
+                        <p dangerouslySetInnerHTML={{ __html: aboutMe }} />
+                    </TagGroup>
+                    <TagGroup tag='section' attr='class="skills"'>
+                        <Skills />
+                    </TagGroup>
+                </TagGroup>
+            </TagGroup>
         </section>
     );
 }
