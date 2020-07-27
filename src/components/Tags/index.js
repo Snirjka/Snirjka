@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
@@ -34,8 +34,27 @@ TagText.propTypes = {
 }
 
 export const TagGroup = ({ tag, attr, tabs = 0, children }) => {
+    const [isHover, setIsHover] = useState(false);
+
+    const handleMouseEnter = () => {
+        document.querySelectorAll('.tag-group.hover').forEach(node => {
+            node.classList.add('cancel');
+        });
+        setIsHover(true);
+    }
+    
+    const handleMouseLeave = () => {
+        setIsHover(false);
+        const nodes = document.querySelectorAll('.tag-group.cancel');
+        const nodesLength = nodes.length;
+        if (nodesLength) {
+            nodes[nodesLength - 1].classList.remove('cancel');
+        }
+    }
     return (
-        <div>
+        <div className={`tag-group ${isHover ? 'hover' : ''}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
             <TagName tabs={tabs} br>{tag}{attr && ` ${attr}`}</TagName>
             <TagText tabs={tabs + 2}>{children}</TagText>
             <TagName tabs={tabs}>/{tag}</TagName>

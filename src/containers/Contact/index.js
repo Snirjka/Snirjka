@@ -9,9 +9,9 @@ import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './style.scss';
 
 const contacts = [
-    { icon: faEnvelope, color: '#DC483C', text: 'SNIRJKA@GMAIL.COM' },
-    { icon: faLinkedin, link: 'https://www.linkedin.com/in/snirkara', color: 'white', text: 'LINKEDIN' },
-    { icon: faFacebook, link: 'https://www.facebook.com/snirkara', color: '#3B5998', text: 'FACEBOOK' },
+    { icon: faEnvelope, color: '#DC483C', text: 'snirjka@gmail.com' },
+    { icon: faLinkedin, link: 'https://www.linkedin.com/in/snirkara', color: 'white', text: 'linkedin' },
+    { icon: faFacebook, link: 'https://www.facebook.com/snirkara', color: '#3B5998', text: 'facebook' },
 ]
 
 const ContactOptions = () => {

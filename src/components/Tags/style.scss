@@ -1,5 +1,47 @@
+$tagNameColor: #4F4F52;
+$tagNameHoverColor: #af2020;
+
+
 .tag-name {
-    color: #4F4F52;
+    color: $tagNameColor;
+    transition: 0.3s;
     // font-family: 'Lobster', cursive;
-    font-family: 'La Belle Aurore',cursive;
+    font-family: 'La Belle Aurore', cursive;
+}
+
+.tag-group {
+    position: relative;
+
+    &.hover {
+
+        &::before {
+            background: $tagNameHoverColor;
+        }
+
+        >.tag-name {
+            color: $tagNameHoverColor;
+        }
+
+        &.cancel {
+
+            &::before {
+                background: $tagNameColor;
+            }
+
+            >.tag-name {
+                color: $tagNameColor;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 1px;
+        transition: 0.3s;
+        height: calc(100% - 48px);
+        background: #4F4F52;
+        position: absolute;
+        left: 0;
+        top: 24px;
+    }
 }
