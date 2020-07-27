@@ -1,16 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import TypeIt from 'typeit';
 import { TagGroup } from '../../components/Tags';
 import StretchingChild from '../../components/StretchingChild';
 import { SkillsContext } from '../../contexts/SkillsContext';
 import mePNG from '../../assets/images/me.png';
 import './style.scss';
 
-const aboutMe = `Hello, my name is Snir Kara, 25 years old from Israel.<br /><br />
-In the last couple of years I am studying programming & web development,<br />
-I got experience in both frontend and backend programming,<br />
-including developing large scale projects, mobile pwa apps,<br />
-fully responsive websites, troubleshooting, and debugging code.<br />
+const aboutMe = `Hello, my name is Snir Kara, 25 years old from Israel.| 
+|
+In the last couple of years I am studying programming & web development,|
+I got experience in both frontend and backend programming,|
+including developing large scale projects, mobile pwa apps,|
+fully responsive websites, troubleshooting, and debugging code.|
 I am passionate about learning new skills & technolegies.`
+
+const Paragraph = () => {
+    useEffect(() => {
+        new TypeIt('.paragraph', {
+            strings: aboutMe.split('|'),
+            speed: 25,
+            waitUntilVisible: true
+        }).go();
+    })
+    return (
+        <p className='paragraph'></p>
+    );
+}
+
 
 const Skills = () => {
     const { skills } = useContext(SkillsContext);
@@ -47,7 +63,7 @@ const About = () => {
                         <h1><StretchingChild>About me <img src={mePNG} alt='me' /></StretchingChild></h1>
                     </TagGroup>
                     <TagGroup tag='p'>
-                        <p dangerouslySetInnerHTML={{ __html: aboutMe }} />
+                        <Paragraph />
                     </TagGroup>
                     <TagGroup tag='section' attr='class="skills"'>
                         <Skills />

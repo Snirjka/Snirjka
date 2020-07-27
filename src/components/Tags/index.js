@@ -38,18 +38,13 @@ export const TagGroup = ({ tag, attr, tabs = 0, children }) => {
 
     const handleMouseEnter = () => {
         document.querySelectorAll('.tag-group.hover').forEach(node => {
-            node.classList.add('cancel');
+            node.classList.remove('hover');
         });
         setIsHover(true);
     }
-    
+
     const handleMouseLeave = () => {
         setIsHover(false);
-        const nodes = document.querySelectorAll('.tag-group.cancel');
-        const nodesLength = nodes.length;
-        if (nodesLength) {
-            nodes[nodesLength - 1].classList.remove('cancel');
-        }
     }
     return (
         <div className={`tag-group ${isHover ? 'hover' : ''}`}
