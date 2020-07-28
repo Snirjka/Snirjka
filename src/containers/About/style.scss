@@ -9,11 +9,16 @@
     h1 {
         color: $primaryColor;
 
+        span {
+            position: relative;
+        }
+        
         img {
             width: 40px;
-            top: 10px;
-            left: 8px;
-            position: relative;
+            top: 0;
+            right: -50px;
+            float: right;
+            position: absolute;
             animation-name: pop;
             animation-duration: 1s;
         }
