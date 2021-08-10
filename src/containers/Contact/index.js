@@ -69,9 +69,9 @@ const Contact = () => {
                         <h1><StretchingChild>Contact</StretchingChild></h1>
                     </TagGroup>
                     <ContactOptions />
-                    <TagGroup tag='a' attr='href="github.com/snirjka"'>
+                    {/* <TagGroup tag='a' attr='href="github.com/snirjka"'>
                         <SourceCodeLink />
-                    </TagGroup>
+                    </TagGroup> */}
                 </TagGroup>
             </TagGroup>
         </section>
